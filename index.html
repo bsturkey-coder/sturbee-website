@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sturbee Financial Coaching | Change Your Financial Future Today</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sturbee Financial Coaching helps high-income professionals, couples, and families build a simple, sophisticated money plan using proven, research-informed coaching principles." />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/sfc-icon.png" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbf7f0;            /* soft off-white */
+      --bg-alt: #ffffff;        /* pure white */
+      --bg-muted: #f3eee4;      /* light section */
+      --ink: #111827;           /* main text */
+      --muted: #6b7280;         /* secondary text */
+      --accent: #b68a2c;        /* sturbee gold */
+      --accent-soft: rgba(182, 138, 44, 0.08);
+      --border-soft: rgba(15, 23, 42, 0.06);
+      --border-strong: rgba(15, 23, 42, 0.14);
+      --radius-lg: 1.75rem;
+      --radius-md: 1.1rem;
+      --radius-full: 999px;
+      --shadow-soft: 0 22px 60px rgba(15, 23, 42, 0.09);
+      --shadow-subtle: 0 10px 30px rgba(15, 23, 42, 0.04);
+      --transition-fast: 150ms ease-out;
+      --transition-med: 220ms ease-out;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      scroll-behavior: smooth;
+    }
+    body {
+      line-height: 1.6;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 4rem;
+    }
+    /* NAVBAR */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(251, 247, 240, 0.96);
+      border-bottom: 1px solid var(--border-soft);
+      margin: -1.5rem -1.25rem 2.25rem;
+      padding: 0.7rem 1.5rem;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.04);
+    }
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .brand-logo {
+      height: 40px;
+      width: auto;
+    }
+.brand-note {
+  font-size: 0.75rem;
+  text-transform: none;
+  letter-spacing: 0.12em;
+  font-weight: 600; /* bold for stronger presence */
+  color: #4b5563;
+  padding-top: 0.1rem;
+  display: block; /* ensure it forms its own line */
+  line-height: 1.4;
+}
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      align-items: center;
+      font-size: 0.88rem;
+    }
+    .nav-links a {
+      color: var(--muted);
+      padding-bottom: 0.15rem;
+      position: relative;
+      transition: color var(--transition-fast);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 0.78rem;
+    }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.2rem;
+      width: 0;
+      height: 1px;
+      border-radius: 999px;
+      background: var(--accent);
+      transition: width var(--transition-fast);
+    }
+    .nav-links a:hover {
+      color: var(--ink);
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--ink);
+      color: #f9fafb;
+      border-radius: var(--radius-full);
+      padding: 0.55rem 1.1rem;
+      font-weight: 500;
+      font-size: 0.8rem;
+      border: 1px solid rgba(15, 23, 42, 0.8);
+      cursor: pointer;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+      white-space: nowrap;
+    }
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      background: #020617;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.18);
+    }
+    @media (max-width: 830px) {
+      .nav-inner {
+        flex-wrap: wrap;
+        row-gap: 0.6rem;
+      }
+      .brand-note {
+        display: none;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+    /* COMMON ELEMENTS */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-full);
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      font-size: 0.75rem;
+      color: var(--muted);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+    }
+    .pill span.badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+    .grid {
+      display: grid;
+      gap: 2rem;
+    }
+    @media (min-width: 900px) {
+      .grid-2 {
+        grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+        align-items: flex-start;
+      }
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.85rem 1.3rem;
+      border-radius: var(--radius-full);
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+      text-align: center;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #f9fafb;
+      border-color: rgba(182, 138, 44, 0.9);
+      box-shadow: 0 18px 36px rgba(182, 138, 44, 0.32);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      background: #9b7322;
+      box-shadow: 0 22px 44px rgba(182, 138, 44, 0.4);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--border-strong);
+    }
+    .btn-outline:hover {
+      background: #111827;
+      color: #f9fafb;
+      border-color: #111827;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.18);
+    }
+    .btn-mini {
+      padding: 0.55rem 0.9rem;
+      font-size: 0.78rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
+      cursor: pointer;
+      transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .btn-mini:hover {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: #f9fafb;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
+      transform: translateY(-1px);
+    }
+    .btn-subtle {
+      padding: 0.35rem 0.8rem;
+      font-size: 0.78rem;
+      border-radius: var(--radius-full);
+      border: 1px dashed var(--border-strong);
+      color: var(--muted);
+      background: #ffffff;
+    }
+    /* TYPOGRAPHY */
+    .display-serif {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+    }
+    .hero-heading {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: clamp(2.5rem, 3.4vw, 3.3rem);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+    }
+    .hero-highlight {
+      color: var(--accent);
+    }
+    .section-title {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 1.7rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .section-kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 32rem;
+    }
+    .tiny-text {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      margin-top: 0.25rem;
+    }
+    /* HERO */
+    .hero-shell {
+      background: radial-gradient(circle at top left, #ffffff 0, #f7f1e7 32%, #f3eee4 60%, #fdfbf8 100%);
+      border-radius: var(--radius-lg);
+      padding: 2.4rem 2rem 2.6rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(209, 213, 219, 0.5);
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 768px) {
+      .hero-shell {
+        padding: 1.8rem 1.3rem 2.1rem;
+      }
+    }
+    .hero {
+      display: grid;
+      gap: 2.5rem;
+    }
+    @media (min-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+        align-items: center;
+      }
+    }
+    .hero-logo {
+      height: 68px;
+      width: auto;
+      margin-bottom: 0.9rem;
+    }
+    .hero-text {
+      margin-top: 1rem;
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 36rem;
+    }
+    .hero-list {
+      margin-top: 0.9rem;
+      list-style: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .hero-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.45rem;
+    }
+    .hero-list li span {
+      color: var(--accent);
+      font-size: 1rem;
+      margin-top: 0.1rem;
+    }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin: 1.6rem 0 1rem;
+    }
+    .hero-note {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .hero-note strong {
+      font-weight: 600;
+      color: var(--ink);
+    }
+    /* HERO CARD */
+    .hero-card {
+      border-radius: 1.5rem;
+      background: #111827;
+      color: #f9fafb;
+      border: 1px solid rgba(15, 23, 42, 0.8);
+      box-shadow: 0 30px 70px rgba(15, 23, 42, 0.5);
+      padding: 1.6rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(182, 138, 44, 0.32), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .hero-card-inner {
+      position: relative;
+      z-index: 1;
+      padding-top: 1.8rem;
+    }
+    .hero-card-floater {
+      position: absolute;
+      right: 1.1rem;
+      top: 1.1rem;
+      padding: 0.32rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(248, 250, 252, 0.16);
+      font-size: 0.72rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .hero-card-floater-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.32);
+    }
+    .hero-card-tag {
+      font-size: 0.75rem;
+      color: #e5e7eb;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.45rem;
+      opacity: 0.8;
+    }
+    .hero-card-headline {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+    }
+    .hero-card-metric-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin: 0.8rem 0 1.1rem;
+    }
+    .metric-pill {
+      padding: 0.6rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      display: flex;
+      flex-direction: column;
+      min-width: 130px;
+    }
+    .metric-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: #9ca3af;
+    }
+    .metric-value {
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+    .metric-value.positive {
+      color: #4ade80;
+    }
+    .metric-value.danger {
+      color: #fb7185;
+    }
+    .hero-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.9rem;
+      font-size: 0.78rem;
+      color: #e5e7eb;
+      margin-top: 0.4rem;
+    }
+    .hero-avatar {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .avatar-img {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(248, 250, 252, 0.4);
+      background: #020617;
+      padding: 3px;
+    }
+    /* SECTIONS */
+    section {
+      margin-bottom: 3.25rem;
+    }
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.7rem;
+    }
+    /* WHO I HELP */
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.8rem;
+      font-size: 0.83rem;
+    }
+    .chip {
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      color: var(--muted);
+      background: #ffffff;
+    }
+    /* CARDS */
+    .card {
+      border-radius: var(--radius-md);
+      background: var(--bg-alt);
+      border: 1px solid var(--border-soft);
+      padding: 1.25rem 1.25rem 1.35rem;
+      box-shadow: var(--shadow-subtle);
+      position: relative;
+      overflow: hidden;
+    }
+    .card-tag {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+    .card-title {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.45rem;
+    }
+    .card-text {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+    .card-list {
+      list-style: none;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+    }
+    .card-list li {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 0.35rem;
+    }
+    .card-list li span {
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+    .price {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .price span {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--muted);
+      margin-left: 0.25rem;
+    }
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 0.85rem;
+    }
+    .pill-soft {
+      padding: 0.25rem 0.7rem;
+      font-size: 0.72rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(182, 138, 44, 0.32);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    /* LEAD BOX */
+    .lead-box {
+      border-radius: var(--radius-lg);
+      background: #111827;
+      color: #f9fafb;
+      border: 1px solid rgba(15, 23, 42, 0.9);
+      box-shadow: 0 30px 70px rgba(15, 23, 42, 0.55);
+      padding: 1.7rem 1.7rem 1.9rem;
+      display: grid;
+      gap: 1.2rem;
+    }
+    @media (min-width: 800px) {
+      .lead-box {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        align-items: center;
+      }
+    }
+    .lead-title {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+    .lead-text {
+      font-size: 0.9rem;
+      color: #e5e7eb;
+      margin-bottom: 0.5rem;
+      max-width: 26rem;
+    }
+    .input-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.6rem;
+    }
+    .input-row input {
+      flex: 1 1 190px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.96);
+      padding: 0.75rem 0.9rem;
+      color: #f9fafb;
+      font-size: 0.85rem;
+      outline: none;
+    }
+    .input-row input::placeholder {
+      color: #9ca3af;
+    }
+    /* ABOUT / FAQ / CONTACT */
+.about-inline-photo {
+  width: 160px;
+  margin-bottom: 1rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--border-soft);
+}
+.about-inline-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+    .about-text {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+      max-width: 40rem;
+    }
+    .about-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+    }
+    .about-badge {
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      padding: 0.25rem 0.7rem;
+      color: var(--muted);
+      background: #ffffff;
+    }
+    .faq-list {
+      display: grid;
+      gap: 1rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .faq-item strong {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 0.12rem;
+      font-weight: 600;
+    }
+    .faq-item {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-soft);
+      padding: 1rem 1.05rem 1.1rem;
+      background: #ffffff;
+    }
+    .contact-grid {
+      display: grid;
+      gap: 1.7rem;
+      align-items: flex-start;
+    }
+    @media (min-width: 800px) {
+      .contact-grid {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      }
+    }
+    .contact-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 34rem;
+    }
+    .contact-form {
+      border-radius: var(--radius-md);
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      padding: 1.25rem 1.3rem 1.4rem;
+      box-shadow: var(--shadow-subtle);
+      display: grid;
+      gap: 0.8rem;
+    }
+    .field-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.18rem;
+    }
+    .field-required {
+      color: #b91c1c;
+      margin-left: 0.15rem;
+    }
+    .field-input, .field-textarea, .field-select {
+      width: 100%;
+      border-radius: 0.9rem;
+      border: 1px solid rgba(209, 213, 219, 0.9);
+      background: #f9fafb;
+      padding: 0.72rem 0.85rem;
+      color: var(--ink);
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+    }
+    .field-input:focus, .field-textarea:focus, .field-select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(182, 138, 44, 0.25);
+      background: #ffffff;
+    }
+    .field-textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+    .field-input::placeholder,
+    .field-textarea::placeholder {
+      color: #9ca3af;
+    }
+    /* FOOTER */
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border-soft);
+      font-size: 0.75rem;
+      color: #9ca3af;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .footer-links a {
+      color: #9ca3af;
+    }
+    .footer-links a:hover {
+      color: var(--ink);
+    }
+    /* ALT SECTION BACKGROUNDS */
+    .section-muted {
+      background: var(--bg-muted);
+      border-radius: var(--radius-lg);
+      padding: 2.1rem 1.7rem 2.2rem;
+      border: 1px solid rgba(209, 213, 219, 0.6);
+      box-shadow: var(--shadow-subtle);
+    }
+    @media (max-width: 768px) {
+      .section-muted {
+        padding: 1.5rem 1.2rem 1.7rem;
+      }
+    }
+@media (max-width: 640px) {
+  .brand-note {
+    display: block;
+    font-size: 0.65rem;
+    line-height: 1.4;
+    letter-spacing: 0.12em;
+    margin-top: 0.1rem;
+  }
+}
+  
+    /* NEW: About portrait + refund policy */
+    .about-photo-wrap {
+      border-radius: 1.5rem;
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.16);
+      margin-bottom: 0.9rem;
+      max-width: 260px;
+    }
+
+    .about-photo {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .about-photo-wrap {
+        max-width: 200px;
+      }
+    }
+
+    .refund-policy {
+      font-size: 0.86rem;
+      color: var(--muted);
+      max-width: 46rem;
+    }
+
+    .refund-policy h3 {
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-size: 1.25rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .refund-policy ul {
+      margin: 0.6rem 0 0.2rem;
+      padding-left: 1rem;
+    }
+
+    .refund-policy li {
+      margin-bottom: 0.35rem;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div style="display:flex; align-items:center; gap:0.75rem;">
+        <a href="#top" class="brand">
+          <img src="images/sfc-text.png" alt="Sturbee Financial Coaching" class="brand-logo" />
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#who-we-help">Who I Help</a>
+        <a href="#services">Coaching</a>
+        <a href="#products">Tools</a>
+        <a href="#process">How It Works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="https://calendly.com/sturbeefinance/complimentary" class="nav-cta">
+        <span>Book Consultation</span>
+        <span>→</span>
+      </a>
+    </div>
+  </header>
+  <main class="page" id="top">
+    <!-- HERO -->
+    <section class="hero-shell">
+      <div class="hero">
+        <div>
+          <img src="images/sfc.png" alt="Sturbee Financial Coaching" class="hero-logo" />
+          <div class="pill">
+            <span class="badge">★</span>
+            <span>Certified Master Financial Coach • Calm, confidential support</span>
+          </div>
+          <h1 class="hero-heading">
+            A sophisticated, simple money plan
+            <span class="hero-highlight">for professionals, couples, and families.</span>
+          </h1>
+          <p class="hero-text">
+            Sturbee Financial Coaching helps you organize your finances, destroy debt, and align your money with your values 
+            in clear language, with practical next steps you’ll actually follow.
+          </p>
+          <ul class="hero-list">
+            <li><span>✓</span> Designed for high-income professionals, couples, and busy families</li>
+            <li><span>✓</span> Proven timeless money principles, tailored to your real numbers and real-life</li>
+            <li><span>✓</span> Calm, judgment-free coaching focused on clarity and action</li>
+          </ul>
+          <div class="hero-ctas">
+            <a href="https://calendly.com/sturbeefinance/complimentary" class="btn btn-primary">
+              <span>Book Your Complimentary Consultation</span>
+              <span>→</span>
+            </a>
+            <a href="#products" class="btn btn-outline">Explore Coaching Tools</a>
+          </div>
+          <div class="hero-note">
+            <span class="btn-subtle">No obligation, no sales pressure.</span>
+            <span><strong>First call:</strong> we listen, map your situation, and you decide the next step.</span>
+          </div>
+        </div>
+        <!-- HERO CARD -->
+        <aside class="hero-card">
+          <div class="hero-card-floater">
+            <span class="hero-card-floater-dot"></span>
+            <span>Clarity typically in 1–2 sessions</span>
+          </div>
+          <div class="hero-card-inner">
+            <p class="hero-card-tag">Snapshot • A typical client transformation</p>
+            <p class="hero-card-headline">
+              From “We make good money, but where is it going?” to “We have a clear plan and a shared goal.”
+            </p>
+            <div class="hero-card-metric-row">
+              <div class="metric-pill">
+                <span class="metric-label">Debt Payoff Trajectory</span>
+                <span class="metric-value positive">Often 12–24 months faster</span>
+              </div>
+              <div class="metric-pill">
+                <span class="metric-label">Monthly Cash Flow</span>
+                <span class="metric-value positive">Typically $400 to $1,200 unlocked</span>
+              </div>
+              <div class="metric-pill">
+                <span class="metric-label">Money Stress</span>
+                <span class="metric-value danger">“We finally feel in control.”</span>
+              </div>
+            </div>
+            <p class="hero-card-tag" style="margin-bottom: 0.6rem; opacity:0.85;">
+              Together, we build a tailored roadmap then walk it out step by step. You’re not doing this alone.
+            </p>
+            <div class="hero-card-footer">
+              <div class="hero-avatar">
+                <img src="images/sfc-icon.png" alt="Sturbee Financial Coaching" class="avatar-img" />
+                <div>
+                  <div style="font-size: 0.82rem; font-weight: 600;">Brian Sturkey</div>
+                  <div style="font-size: 0.75rem; opacity:0.85;">
+                    Certified Master Financial Coach
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div style="font-size: 0.8rem; opacity:0.85;">Next step:</div>
+                <div style="font-size: 0.9rem;">Book your complimentary consultation →</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+<!-- ABOUT -->
+    <section id="about">
+      <div class="section-header">
+        <p class="section-kicker">About Sturbee Financial Coaching</p>
+        <h2 class="section-title">A calm, structured space to make money decisions you’ll feel good about.</h2>
+      </div>
+
+      <div class="grid grid-2">
+        <div>
+          <p class="about-text">
+            I’m Brian Sturkey, a Master Financial Coach. I help busy professionals, couples, and families
+            create a clear, realistic plan for their money so they can move from stress and drift to confidence and intention.
+          </p>
+          <p class="about-text">
+            My approach is straightforward: no jargon, no judgment, and no product sales. Just practical coaching rooted in
+            proven principles, tailored to your real life and your real numbers.
+          </p>
+          <p class="about-text">
+            I started Sturbee Financial Coaching because I saw how often smart, hard-working people felt behind or uncertain
+            with money, not because they were irresponsible, but because no one had ever walked them through a simple, holistic plan.
+          </p>
+        </div>
+
+        <div>
+          <div class="about-photo-wrap">
+            <img src="images/1631723691955.jpeg" alt="Brian Sturkey, Master Financial Coach" class="about-photo" />
+          </div>
+
+          <p class="field-label">What clients tend to appreciate:</p>
+          <div class="about-badges">
+            <span class="about-badge">Master Financial Coach</span>
+            <span class="about-badge">Clear, structured conversations</span>
+            <span class="about-badge">Behavior-focused, practical steps</span>
+            <span class="about-badge">Kind, direct accountability</span>
+            <span class="about-badge">Safe, judgment-free space</span>
+          </div>
+          <p class="tiny-text" style="margin-top: 0.75rem;">
+            Based in Georgia (30214) • Coaching clients virtually across the U.S.<br/>
+            Phone: (404) 414-4435 • Email: coaching@sturbee.com
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- WHO I HELP -->
+    <section id="who-we-help">
+      <div class="grid grid-2">
+        <div>
+          <div class="section-header">
+            <p class="section-kicker">Who I Help</p>
+            <h2 class="section-title">You’re not “bad with money.” You’re busy and ready for a better plan.</h2>
+            <p class="section-subtitle">
+              I work with individuals, couples, and families who are serious about aligning their money with what they truly value 
+              without needing a finance degree to understand the plan.
+            </p>
+          </div>
+
+          <p class="about-text" style="margin-bottom:0.5rem;">
+            Clients often come to Sturbee Financial Coaching when:
+          </p>
+          <div class="chip-row">
+            <span class="chip">You earn good money but don’t feel it</span>
+            <span class="chip">Debt or payments feel heavy and constant</span>
+            <span class="chip">You want less stress and more margin</span>
+            <span class="chip">You and your spouse want to get on the same page</span>
+            <span class="chip">You’re ready to be intentional, not reactive, with money</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="card-tag">What we work on</p>
+          <p class="card-title">Real-life money decisions, simplified.</p>
+          <ul class="card-list">
+            <li><span>•</span><div>Creating a clear, realistic zero-based budget that fits your actual lifestyle.</div></li>
+            <li><span>•</span><div>Designing a debt payoff strategy using proven, behavior-based principles.</div></li>
+            <li><span>•</span><div>Prioritizing an emergency fund, so surprises don’t become crises.</div></li>
+            <li><span>•</span><div>Clarifying goals: home payoff, college, giving, travel, retirement.</div></li>
+            <li><span>•</span><div>Reducing money tension and building unity if you’re married.</div></li>
+          </ul>
+          <div class="card-footer">
+            <span class="pill-soft">Discreet • Practical • Tailored</span>
+            <a href="https://calendly.com/sturbeefinance/complimentary" class="btn-mini">
+              Start with a conversation →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- COACHING PACKAGES -->
+    <section id="services" class="section-muted">
+      <div class="section-header">
+        <p class="section-kicker">Coaching</p>
+        <h2 class="section-title">Select the level of guidance that matches your season.</h2>
+        <p class="section-subtitle">
+          Every engagement begins with a complimentary consultation. From there, we’ll decide together which option
+          makes the most sense for your goals, timeline, and pace.
+        </p>
+      </div>
+
+            <div class="grid grid-3">
+        <article class="card">
+          <p class="card-tag">Starter • 1 Session</p>
+          <h3 class="card-title">Money Clarity Session</h3>
+          <p class="price">$149</p>
+          <p class="card-text">
+            A focused 60-minute working session to quickly assess your current situation and identify specific next steps.
+          </p>
+          <ul class="card-list">
+            <li><span>✓</span><div>60-minute private Zoom session</div></li>
+            <li><span>✓</span><div>High-level review of income, expenses, and obligations</div></li>
+            <li><span>✓</span><div>Outline of your next 90 days with money</div></li>
+          </ul>
+          <div class="card-footer">
+            <a href="https://calendly.com/sturbeefinance/complimentary" class="btn-mini" target="_blank" rel="noopener noreferrer">
+              Schedule Your Clarity Session
+            </a>
+          </div>
+        </article>
+
+        <article class="card" style="border-color: rgba(182,138,44,0.35); box-shadow: 0 18px 45px rgba(15,23,42,0.12);">
+          <p class="card-tag">Most Popular • 6 Weeks</p>
+          <h3 class="card-title">Financial Reset Program</h3>
+          <p class="price">$749</p>
+          <p class="card-text">
+            A structured reset of your financial system: spending plan, debt strategy, savings, and a clear plan for the next 6–12 months.
+          </p>
+          <ul class="card-list">
+            <li><span>✓</span><div>Three 60-minute coaching sessions</div></li>
+            <li><span>✓</span><div>Custom spending plan and debt payoff roadmap</div></li>
+            <li><span>✓</span><div>Email and text support between sessions</div></li>
+          </ul>
+          <div class="card-footer">
+            <a href="https://calendly.com/sturbeefinance/complimentary" class="btn-mini" target="_blank" rel="noopener noreferrer">
+              Start Your Financial Reset
+            </a>
+            <span class="pill-soft">Best for couples &amp; families</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <p class="card-tag">Ongoing • 3 Months</p>
+          <h3 class="card-title">Ongoing Coaching &amp; Accountability</h3>
+          <p class="price">$249/mo</p>
+          <p class="card-text">
+            Continued guidance and accountability as income, goals, or circumstances change so your plan stays aligned.
+          </p>
+          <ul class="card-list">
+            <li><span>✓</span><div>Monthly 60-minute coaching session</div></li>
+            <li><span>✓</span><div>Quarterly goal review and adjustments</div></li>
+            <li><span>✓</span><div>Priority email support</div></li>
+          </ul>
+          <div class="card-footer">
+            <a href="https://calendly.com/sturbeefinance/complimentary" class="btn-mini" target="_blank" rel="noopener noreferrer">
+              Explore Membership Options
+            </a>
+          </div>
+        </article>
+      </div>
+</section>
+
+    <!-- TOOLS / PRODUCTS -->
+    <section id="products">
+      <div class="section-header">
+        <p class="section-kicker">Tools</p>
+        <h2 class="section-title">Prefer to start on your own? Use the Sturbee toolkit.</h2>
+        <p class="section-subtitle">
+          These digital resources are built around the same principles I use in coaching sessions so you can make
+          meaningful progress even if you’re not ready for 1:1 coaching yet.
+        </p>
+      </div>
+
+            <div class="grid grid-3">
+        <article class="card">
+          <p class="card-tag">Template • Google Sheets</p>
+          <h3 class="card-title">Monthly Budget Dashboard</h3>
+          <p class="price">
+            <span style="text-decoration: line-through; opacity: 0.6;">$29</span>
+            <span>$19</span>
+            <span style="font-size: 0.75rem; opacity: 0.7;">December Only</span>
+          </p>
+          <p class="card-text">
+            A clean, zero-based budgeting template to track income, spending, and goals in one place.
+          </p>
+          <div class="card-footer">
+            <a href="https://sturkey3.gumroad.com/l/rlwvjv" class="btn-mini" target="_blank" rel="noopener noreferrer">
+              Buy the dashboard →
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <p class="card-tag">Workbook • PDF</p>
+          <h3 class="card-title">90-Day Financial Reset Guide</h3>
+          <p class="price">$99</p>
+          <p class="card-text">
+            A guided workbook that walks you step by step through cleaning up your accounts, clarifying your goals,
+            and building a focused 90-day action plan you can stick to.
+          </p>
+          <p class="tiny-text">Use it on its own or alongside coaching for extra clarity and structure.</p>
+          <div class="card-footer">
+            <a href="https://sturkey3.gumroad.com/l/mtxlv" class="btn-mini" target="_blank" rel="noopener noreferrer">
+              Get the guide →
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <p class="card-tag">Bundle • Best Value</p>
+          <h3 class="card-title">Financial Reset Bundle</h3>
+          <p class="price">$125</p>
+          <p class="card-text">
+            Get the Monthly Budget Dashboard and the 90-Day Financial Reset Guide together so you can plan,
+            track, and reset your money in one simple system.
+          </p>
+          <div class="card-footer">
+            <a href="https://sturkey3.gumroad.com/l/udcxxs" class="btn-mini" target="_blank" rel="noopener noreferrer">
+              Get the bundle →
+            </a>
+          </div>
+        </article>
+      </div>
+</section>
+
+    <!-- HOW IT WORKS -->
+    <section id="process" class="section-muted">
+      <div class="section-header">
+        <p class="section-kicker">How It Works</p>
+        <h2 class="section-title">A simple, structured process designed for busy professionals.</h2>
+        <p class="section-subtitle">
+          You don’t need more complexity. You need clarity, structure, and a trusted guide. Here’s how we work together.
+        </p>
+      </div>
+
+      <div class="grid" style="gap: 1rem;">
+        <div class="card">
+          <p class="card-tag">Step 1</p>
+          <p class="card-title">Complimentary consultation</p>
+          <p class="card-text">
+            A brief call to understand your situation, answer questions, and explore whether coaching is the right fit.
+          </p>
+        </div>
+
+        <div class="card">
+          <p class="card-tag">Step 2</p>
+          <p class="card-title">Design your roadmap</p>
+          <p class="card-text">
+            We build a clear, tailored plan around spending, debt, savings, and goals. You’ll know exactly what to focus on.
+          </p>
+        </div>
+
+        <div class="card">
+          <p class="card-tag">Step 3</p>
+          <p class="card-title">Walk it out with support</p>
+          <p class="card-text">
+            Coaching sessions, check-ins, and tools give you structure and accountability without shame or pressure.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEAD MAGNET / FREE GUIDE -->
+    <section id="lead-magnet">
+      <div class="lead-box">
+        <div>
+          <p class="lead-title">First Five Moves for a Financial Reset</p>
+          <p class="lead-text">
+            A concise, practical guide to help you quickly stabilize your money, create breathing room, and decide what to focus on first.
+          </p>
+          <ul class="card-list" style="margin-bottom: 0.4rem;">
+            <li><span>✓</span><div>Five concrete steps you can complete in under a week</div></li>
+            <li><span>✓</span><div>Prompts to clarify what you actually want money to do for your life</div></li>
+            <li><span>✓</span><div>A simple checklist you can revisit monthly</div></li>
+          </ul>
+        </div>
+        <div>
+          <p class="field-label" style="color:#e5e7eb;">Want the guide?</p>
+          <p class="lead-text">
+            Mention the <strong>“First Five Moves” guide</strong> in your contact form or consultation request,
+            and I’ll send it over as a PDF.
+          </p>
+          <a href="#contact" class="btn btn-primary">Request the Free Guide →</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section id="faq" class="section-muted">
+      <div class="section-header">
+        <p class="section-kicker">FAQ</p>
+        <h2 class="section-title">Common questions.</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <p><strong>Is this the same as investment advice or financial planning?</strong></p>
+          <p>
+            No. I don’t manage investments, sell financial products, or provide tax/legal advice. Coaching focuses on your
+            cash flow, spending, debt, savings, and practical day-to-day decisions. When needed, I’ll encourage you to work
+            with qualified tax, legal, or investment professionals as well.
+          </p>
+        </div>
+        <div class="faq-item">
+          <p><strong>What if I’m embarrassed about my situation?</strong></p>
+          <p>
+            You’re not alone and you’re not the worst I’ve ever seen. Coaching is private, judgment-free, and focused on
+            where you’re going next, not where you’ve been. The fact that you’re exploring this is already a strong step.
+          </p>
+        </div>
+        <div class="faq-item">
+          <p><strong>Do you work with couples?</strong></p>
+          <p>
+            Yes. Working with couples is a significant part of my coaching. We’ll create room for both perspectives and
+            build a plan you can both support, even if you approach money differently.
+          </p>
+        </div>
+        <div class="faq-item">
+          <p><strong>How are sessions held?</strong></p>
+          <p>
+            Most sessions are held virtually via Zoom. Before we meet, you’ll complete a brief questionnaire and, if you’re
+            comfortable, share some basic numbers so we can use our time efficiently and focus on decisions not data entry.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-header">
+        <p class="section-kicker">Next Step</p>
+        <h2 class="section-title">Let’s talk about what you’d like money to do for your life.</h2>
+        <p class="section-subtitle">
+          The best place to start is a complimentary consultation. You can schedule directly or send a message using the form below.
+        </p>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <p class="contact-text">
+            During your consultation, we’ll discuss what’s working, what isn’t, and what you’d like to see change. We’ll then
+            outline options, answer your questions, and identify at least one constructive next step.
+          </p>
+          <p class="contact-text">
+            If we’re a good fit, we’ll discuss coaching options. If not, you’ll still leave with more clarity than you had before.
+          </p>
+          <ul class="card-list" style="margin-top: 0.75rem;">
+            <li><span>✓</span><div>20 30 minute conversation</div></li>
+            <li><span>✓</span><div>Overview of your current landscape</div></li>
+            <li><span>✓</span><div>At least one practical next step you can take right away</div></li>
+          </ul>
+          <div style="margin-top: 0.9rem;">
+            <a href="https://calendly.com/sturbeefinance/complimentary" class="btn btn-primary">
+              Schedule Your Consultation
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" method="POST" action="https://formspree.io/f/xvgjpnek" accept-charset="UTF-8">
+  <input type="hidden" name="_redirect" value="https://www.sturbee.com/thankyou.html" />
+  <div>
+    <label class="field-label">Name<span class="field-required">*</span></label>
+    <input type="text" class="field-input" name="name" placeholder="Your full name" required />
+  </div>
+  <div>
+    <label class="field-label">Email<span class="field-required">*</span></label>
+    <input type="email" class="field-input" name="email" placeholder="you@example.com" required />
+  </div>
+  <div>
+    <label class="field-label">What’s going on with your money right now?</label>
+    <textarea class="field-textarea" name="message" placeholder="Share as much or as little as you’d like. This helps me prepare for our conversation."></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">
+    <span>Send Message</span>
+    <span>→</span>
+  </button>
+  <p class="tiny-text">
+    By submitting this form you agree to be contacted by Sturbee Financial Coaching. Your information is kept private and never sold.
+  </p>
+</form>
+      </div>
+    </section>
+        
+
+
+
+
+
+  <footer>
+      <span>© <span id="year"></span> Sturbee Financial Coaching. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        
+        <a href="https://calendly.com/sturbeefinance/complimentary">Contact</a>
+        <a href="#lead-magnet">Free Guide</a>
+        <a href="refund-policy.html">Refund Policy</a>
+      </div>
+    </footer>
+  </main>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
