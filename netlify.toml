@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+  command = ""
+
+# Optional redirects for single-page apps (not required for this repo):
+#[[redirects]]
+#  from = "/*"
+#  to = "/index.html"
+#  status = 200
