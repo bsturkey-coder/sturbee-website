@@ -790,26 +790,93 @@ footer {
     max-width: 200px;
   }
 }
+/* Consolidated: refund policy styles are defined under `body.refund-policy` below */
 
-.refund-policy {
-  font-size: 0.86rem;
-  color: var(--muted);
-  max-width: 46rem;
+/* Page-specific: Refund & Rescheduling Policy (scoped) */
+body.refund-policy {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
 }
-
-.refund-policy h3 {
+body.refund-policy .page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+body.refund-policy h1 {
   font-family: "Cormorant Garamond", "Times New Roman", serif;
-  font-size: 1.25rem;
+  font-size: 2.2rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
 }
-
-.refund-policy ul {
-  margin: 0.6rem 0 0.2rem;
-  padding-left: 1rem;
+body.refund-policy h2 {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 1.6rem;
+  margin-bottom: 0.45rem;
 }
-
-.refund-policy li {
+body.refund-policy p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0.4rem 0;
+}
+body.refund-policy ul {
+  margin: 0.5rem 0 0.4rem;
+  padding-left: 1.15rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+body.refund-policy li {
+  margin-bottom: 0.25rem;
+}
+body.refund-policy .kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
   margin-bottom: 0.35rem;
 }
+body.refund-policy .card {
+  /* retains base .card rules from global CSS; use minimal page tweaks */
+  padding: 1rem;
+}
+body.refund-policy .back-link span {
+  font-size: 1rem;
+}
+body.refund-policy .logo {
+  height: 40px;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+/* Page-specific: Thank You (scoped) */
+body.thank-you {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  padding: 3rem;
+  text-align: center;
+  color: var(--ink);
+}
+body.thank-you .box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+body.thank-you a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
