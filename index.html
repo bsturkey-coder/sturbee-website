@@ -11,9 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-
-
+  
 
     .page {
       max-width: 1120px;
@@ -768,12 +766,14 @@
       }
     }
 
+<link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="components.css" />
 </head>
 <body>
   <!-- NAV -->
   <header class="nav">
     <div class="nav-inner">
-      <div style="display:flex; align-items:center; gap:0.75rem;">
+      <div class="nav-brand-row">
         <a href="#top" class="brand">
           <img src="images/sfc-text.png" alt="Sturbee Financial Coaching" class="brand-logo" />
         </a>
@@ -852,22 +852,22 @@
                 <span class="metric-value danger">“We finally feel in control.”</span>
               </div>
             </div>
-            <p class="hero-card-tag" style="margin-bottom: 0.6rem; opacity:0.85;">
+            <p class="hero-card-tag hero-card-tag-tight">
               Together, we build a tailored roadmap then walk it out step by step. You’re not doing this alone.
             </p>
             <div class="hero-card-footer">
               <div class="hero-avatar">
                 <img src="images/sfc-icon.png" alt="Sturbee Financial Coaching" class="avatar-img" />
                 <div>
-                  <div style="font-size: 0.82rem; font-weight: 600;">Brian Sturkey</div>
-                  <div style="font-size: 0.75rem; opacity:0.85;">
+                  <div class="avatar-name">Brian Sturkey</div>
+                  <div class="avatar-subtitle">
                     Certified Master Financial Coach
                   </div>
                 </div>
               </div>
               <div>
-                <div style="font-size: 0.8rem; opacity:0.85;">Next step:</div>
-                <div style="font-size: 0.9rem;">Book your complimentary consultation →</div>
+                <div class="hero-next-label">Next step:</div>
+                <div class="hero-next-text">Book your complimentary consultation →</div>
               </div>
             </div>
           </div>
@@ -912,15 +912,12 @@
           </div>
 
           
-          <p class="tiny-text" style="margin-top: 0.75rem;">
+          <p class="tiny-text u-mt-075">
             Based in Georgia • Coaching clients virtually across the U.S. • Email: coaching@sturbee.com
           </p>
         </div>
       </div>
     </section>
-
-
-
 
     <!-- WHO I HELP -->
     <section id="who-we-help">
@@ -935,7 +932,7 @@
             </p>
           </div>
 
-          <p class="about-text" style="margin-bottom:0.5rem;">
+          <p class="about-text about-text-tight">
             Clients often come to Sturbee Financial Coaching when:
           </p>
           <div class="chip-row">
@@ -966,7 +963,6 @@
         </div>
       </div>
     </section>
-
 
     <!-- COACHING PACKAGES -->
     <section id="services" class="section-muted">
@@ -999,7 +995,7 @@
           </div>
         </article>
 
-        <article class="card" style="border-color: rgba(182,138,44,0.35); box-shadow: 0 18px 45px rgba(15,23,42,0.12);">
+        <article class="card card-featured">
           <p class="card-tag">Most Popular • 6 Weeks</p>
           <h3 class="card-title">Financial Reset Program</h3>
           <p class="price">$749</p>
@@ -1056,9 +1052,9 @@
           <p class="card-tag">Template • Google Sheets</p>
           <h3 class="card-title">Monthly Budget Dashboard</h3>
           <p class="price">
-            <span style="text-decoration: line-through; opacity: 0.6;">$29</span>
+            <span class="price-strike">$29</span>
             <span>$19</span>
-            <span style="font-size: 0.75rem; opacity: 0.7;">December Only</span>
+            <span class="badge-muted">December Only</span>
           </p>
           <p class="card-text">
             A clean, zero-based budgeting template to track income, spending, and goals in one place.
@@ -1113,7 +1109,7 @@
         </p>
       </div>
 
-      <div class="grid" style="gap: 1rem;">
+      <div class="grid u-gap-1">
         <div class="card">
           <p class="card-tag">Step 1</p>
           <p class="card-title">Complimentary consultation</p>
@@ -1148,14 +1144,14 @@
           <p class="lead-text">
             A concise, practical guide to help you quickly stabilize your money, create breathing room, and decide what to focus on first.
           </p>
-          <ul class="card-list" style="margin-bottom: 0.4rem;">
+          <ul class="card-list u-mb-04">
             <li><span>✓</span><div>Five concrete steps you can complete in under a week</div></li>
             <li><span>✓</span><div>Prompts to clarify what you actually want money to do for your life</div></li>
             <li><span>✓</span><div>A simple checklist you can revisit monthly</div></li>
           </ul>
         </div>
         <div>
-          <p class="field-label" style="color:#e5e7eb;">Want the guide?</p>
+          <p class="field-label label-light">Want the guide?</p>
           <p class="lead-text">
             Mention the <strong>“First Five Moves” guide</strong> in your contact form or consultation request,
             and I’ll send it over as a PDF.
@@ -1164,7 +1160,6 @@
         </div>
       </div>
     </section>
-
 
     <!-- FAQ -->
     <section id="faq" class="section-muted">
@@ -1222,12 +1217,12 @@
           <p class="contact-text">
             If we’re a good fit, we’ll discuss coaching options. If not, you’ll still leave with more clarity than you had before.
           </p>
-          <ul class="card-list" style="margin-top: 0.75rem;">
+          <ul class="card-list u-mt-075">
             <li><span>✓</span><div>20 30 minute conversation</div></li>
             <li><span>✓</span><div>Overview of your current landscape</div></li>
             <li><span>✓</span><div>At least one practical next step you can take right away</div></li>
           </ul>
-          <div style="margin-top: 0.9rem;">
+          <div class="u-mt-09">
             <a href="https://calendly.com/sturbeefinance/complimentary" class="btn btn-primary">
               Schedule Your Consultation
             </a>
@@ -1258,10 +1253,6 @@
       </div>
     </section>
         
-
-
-
-
 
   <footer>
       <span>© <span id="year"></span> Sturbee Financial Coaching. All rights reserved.</span>
