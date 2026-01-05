@@ -147,7 +147,7 @@
   box-shadow: 0 22px 44px rgba(182, 138, 44, 0.4);
 }
 .btn-outline {
-  background: transparent;
+  background: #111827;
   color: var(--ink);
   border-color: var(--border-strong);
 }
@@ -805,3 +805,19 @@ body.thank-you a {
 }
 
 .link-muted { text-decoration: none; color: var(--muted); }
+
+/* Ensure pill buttons even when `.btn` is omitted */
+a.btn-primary,
+a.btn-outline,
+button.btn-primary,
+button.btn-outline,
+.btn-primary,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.85rem 1.3rem;
+  border-radius: var(--radius-full, 999px);
+  white-space: nowrap;
+}

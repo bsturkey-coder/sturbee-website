@@ -1,5 +1,0 @@
-/* Legacy stylesheet retained for compatibility.
-   Preferred: include base.css + components.css directly.
-*/
-@import url('base.css');
-@import url('components.css');
