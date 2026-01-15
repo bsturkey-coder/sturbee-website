@@ -1,0 +1,13 @@
+{ 
+"extends": "stylelint-config-standard",
+"rules": { 
+
+        "alpha-value-notation": "number", 
+        "selector-type-case": "lower", 
+        "color-no-hex": true,
+        "indentation": 2,
+        "string-quotes": "double",
+        "block-no-empty": true
+} 
+
+} 
