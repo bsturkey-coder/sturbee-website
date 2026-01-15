@@ -1,7 +1,8 @@
 {
+  "name": "sturbee-website",
+  "version": "1.0.0",
+  "private": true,
   "dependencies": {
-    "bootstrap": "^5.3.8"
-    "editor.formatOnSaveMode": "file"
-
+    "bootstrap": "^5.3.3"
   }
 }
