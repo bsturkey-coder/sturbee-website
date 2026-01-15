@@ -12,11 +12,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Stylesheets -->
- <link rel="stylesheet" href="base.css">
- <link rel="stylesheet" href="components.css">
-
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="components.css">
+  <!-- Open Graph Protocol -->
+  <meta property="og:title" content="Sturbee Financial Coaching | Change Your Financial Future Today" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.sturbee.com/" />
+  <meta property="og:image" content="images/sfc-icon.png" />
+<!--bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
+
 <body>
+<!-- jquery first, then popper.js, then bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
   <!-- NAV -->
   <header class="nav">
     <div class="nav-inner">
@@ -475,15 +487,15 @@
         <form class="contact-form" method="POST" action="https://formspree.io/f/xvgjpnek" accept-charset="UTF-8">
   <input type="hidden" name="_redirect" value="https://www.sturbee.com/thankyou.html" />
   <div>
-    <label class="field-label">Name<span class="field-required">*</span></label>
+    <label class="field-label">Name<span class="field-required">*</span></label><br>
     <input type="text" class="field-input" name="name" placeholder="Your full name" required />
   </div>
   <div>
-    <label class="field-label">Email<span class="field-required">*</span></label>
+    <label class="field-label">Email<span class="field-required">*</span></label><br>
     <input type="email" class="field-input" name="email" placeholder="you@example.com" required />
   </div>
   <div>
-    <label class="field-label">What’s going on with your money right now?</label>
+    <label class="field-label">What’s going on with your money right now?</label><br>
     <textarea class="field-textarea" name="message" placeholder="Share as much or as little as you’d like. This helps me prepare for our conversation."></textarea>
   </div>
   <button type="submit" class="btn btn-primary">
