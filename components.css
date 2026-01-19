@@ -397,7 +397,7 @@
   border: 1px solid rgba(248, 250, 252, 0.16);
   font-size: 0.72rem;
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 0.35rem;
 }
 .hero-card-floater-dot {
