@@ -1,122 +1,74 @@
-/* =====================================================================
-   Sturbee Financial Coaching — Base Styles
-   Purpose: design tokens, reset, layout primitives, typography.
-   Keep component styling in components.css
-   ===================================================================== */
-
 :root {
-  /* Brand tokens (semantic) */
-  --color-bg: #fbf7f0;
-  --color-surface: #ffffff;
-  --color-surface-muted: #f3eee4;
+/* Brand tokens (semantic) */
+--color-bg: #fbf7f0;
+--color-surface: #ffffff;
+--color-surface-muted: #f3eee4;
+--color-ink: #111827;
+--color-muted: #6b7280;
+--color-accent: #b68a2c;
+--color-accent-soft: rgba(182, 138, 44, 0.08);
+--color-border-soft: rgba(15, 23, 42, 0.06);
+--color-border-strong: rgba(15, 23, 42, 0.14);
 
-  --color-ink: #111827;
-  --color-muted: #6b7280;
+--font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+--font-serif: "Cormorant Garamond", "Times New Roman", serif;
 
-  --color-accent: #b68a2c;
-  --color-accent-soft: rgba(182, 138, 44, 0.08);
+--radius-lg: 1.75rem;
+--radius-md: 1.1rem;
+--radius-full: 999px;
 
-  --color-border-soft: rgba(15, 23, 42, 0.06);
-  --color-border-strong: rgba(15, 23, 42, 0.14);
+--shadow-soft: 0 22px 60px rgba(15, 23, 42, 0.09);
+--shadow-subtle: 0 10px 30px rgba(15, 23, 42, 0.04);
 
-  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+--transition-fast: 150ms ease-out;
+--transition-med: 220ms ease-out;
 
-  --radius-lg: 1.75rem;
-  --radius-md: 1.1rem;
-  --radius-full: 999px;
+/* Backward-compatible aliases (do not use in new CSS) */
+--bg: var(--color-bg);
+--bg-alt: var(--color-surface);
+--bg-muted: var(--color-surface-muted);
+--ink: var(--color-ink);
+--muted: var(--color-muted);
+--accent: var(--color-accent);
+--accent-soft: var(--color-accent-soft);
+--border-soft: var(--color-border-soft);
+--border-strong: var(--color-border-strong);
 
-  --shadow-soft: 0 22px 60px rgba(15, 23, 42, 0.09);
-  --shadow-subtle: 0 10px 30px rgba(15, 23, 42, 0.04);
 
-  --transition-fast: 150ms ease-out;
-  --transition-med: 220ms ease-out;
-
-  /* Backward-compatible aliases (legacy) */
-  --bg: var(--color-bg);
-  --bg-alt: var(--color-surface);
-  --bg-muted: var(--color-surface-muted);
-  --ink: var(--color-ink);
-  --muted: var(--color-muted);
-  --accent: var(--color-accent);
-  --accent-soft: var(--color-accent-soft);
-  --border-soft: var(--color-border-soft);
-  --border-strong: var(--color-border-strong);
 }
 
-/* ------------------------------
-   Reset & defaults
--------------------------------- */
-
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
   margin: 0;
-  font-family: var(--font-sans);
+  padding: 0;
+}
+html, body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: var(--bg);
   color: var(--ink);
+  scroll-behavior: smooth;
+}
+body {
   line-height: 1.6;
 }
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
+img {
+  max-width: 100%;
+  display: block;
 }
-
-:focus-visible {
-  outline: 2px solid rgba(182, 138, 44, 0.65);
-  outline-offset: 3px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    transition: none !important;
-    animation: none !important;
-  }
-}
-
-/* ------------------------------
-   Layout primitives
--------------------------------- */
-
 .page {
   max-width: 1120px;
   margin: 0 auto;
   padding: 1.5rem 1.25rem 4rem;
 }
-
 @media (max-width: 768px) {
   .page {
     padding: 1.25rem 1rem 3rem;
   }
 }
-
 @media (max-width: 480px) {
   .page {
     padding: 1rem 0.875rem 2.5rem;
@@ -127,13 +79,11 @@ textarea {
   display: grid;
   gap: 2rem;
 }
-
 @media (max-width: 768px) {
   .grid {
     gap: 1.5rem;
   }
 }
-
 @media (min-width: 900px) {
   .grid-2 {
     grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
@@ -141,42 +91,35 @@ textarea {
   }
 }
 
-/* ------------------------------
-   Typography
--------------------------------- */
+/* TYPOGRAPHY */
 
 .hero-heading {
-  font-family: var(--font-serif);
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-size: clamp(2.5rem, 3.4vw, 3.3rem);
   font-weight: 600;
   letter-spacing: 0.03em;
   line-height: 1.15;
 }
-
 @media (max-width: 640px) {
   .hero-heading {
     font-size: clamp(1.75rem, 5vw, 2.5rem);
   }
 }
-
 .hero-highlight {
   color: var(--accent);
 }
-
 .section-title {
-  font-family: var(--font-serif);
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-size: 1.7rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-weight: 500;
 }
-
 @media (max-width: 640px) {
   .section-title {
     font-size: 1.35rem;
   }
 }
-
 .section-kicker {
   font-size: 0.78rem;
   letter-spacing: 0.2em;
@@ -184,42 +127,35 @@ textarea {
   color: var(--muted);
   margin-bottom: 0.2rem;
 }
-
 .section-subtitle {
   font-size: 0.95rem;
   color: var(--muted);
   max-width: 32rem;
 }
-
 .tiny-text {
   font-size: 0.75rem;
   color: #9ca3af;
   margin-top: 0.25rem;
 }
 
-/* ------------------------------
-   Sections
--------------------------------- */
-
+/* SECTIONS */
 section {
   margin-bottom: 3.25rem;
 }
-
 @media (max-width: 768px) {
   section {
     margin-bottom: 2.5rem;
   }
 }
-
 @media (max-width: 480px) {
   section {
     margin-bottom: 2rem;
   }
 }
-
 .section-header {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
   margin-bottom: 1.7rem;
+}
 }

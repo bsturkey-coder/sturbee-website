@@ -174,7 +174,7 @@
 }
 
 .btn-outline {
-  background: transparent;
+  background: #111827;
   color: var(--ink);
   border-color: var(--border-strong);
 }
@@ -1320,3 +1320,67 @@ body.thank-you a {
   border-bottom: 1px solid var(--border-soft);
 }
 
+.shell--header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 0;
+}
+
+.brand-mark--sm {
+  max-height: 40px;
+}
+
+.section-subtitle--wide {
+  max-width: 44rem;
+}
+
+.grid-gap-2-start {
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.price-xl {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.ol-muted {
+  padding-left: 1.2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.shell--footer-row {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.link-muted {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ELEMENT OVERRIDES (Ensure button styles apply to anchor/button tags)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+a.btn-primary,
+a.btn-outline,
+button.btn-primary,
+button.btn-outline,
+.btn-primary,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.85rem 1.3rem;
+  border-radius: var(--radius-full, 999px);
+  white-space: nowrap;
+}
