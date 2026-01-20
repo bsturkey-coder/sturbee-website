@@ -613,7 +613,9 @@
 }
 
 .hero-next-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.5rem 1rem;
   background: var(--accent);
   color: #f9fafb;
@@ -625,6 +627,8 @@
     box-shadow var(--transition-fast),
     background var(--transition-fast);
   white-space: nowrap;
+  margin-top: 1rem; /* space above */
+  margin-bottom: 0.25rem;
 }
 
 .hero-next-button:hover {
@@ -963,8 +967,9 @@
 /* Contact section */
 .contact-grid {
   display: grid;
-  gap: 1.7rem;
-  align-items: flex-start;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
 }
 
 .contact-text {
@@ -1050,7 +1055,8 @@
   }
 
   .contact-grid {
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
   .contact-text {
